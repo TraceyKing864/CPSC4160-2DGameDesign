@@ -1,0 +1,48 @@
+Name: Tracey King
+
+Course: CPSC4160
+
+Clemson Email Address: tracey
+
+Project no: 6
+
+Project due date: 5/2/18
+
+Project description: This is the project is now a fully playable TRPG/SRPG.
+  Things I added for this project:
+  -Explosions on character death (as well as a sound effect on death)
+  -Attack/ability animations (projectiles)
+  -Added an AI
+  -8 Unique abilities with unique menu and action animations
+  -Fixed fullscreen (I added a render clear at the beginning of engine's draw step)
+  -Music/Sound Effects (both of the background music tracks are midi files generated
+      from another program I created that procedurally generates music)
+  -Reset or quit game after game completion
+
+
+The easiest part of this project: This project was the most fun I've had completing
+  a project, so the easiest part of the project was being motivated to add more
+  features.
+
+
+Problems that I had in completing this project: As it turns out, I've had a bug in
+  my program since project 3 in MultiSprite that never showed itself due to pure
+  coincedence. The bug appeared after I had a different number of frames and animations
+  and it took me an hour to realize it.
+  Also, implementing a path finding algorithm for the AI proved to be very difficult
+  as it's been awhile since Data Structures and Algorithms.
+
+
+Note: change units_player/total and units_ai/total to 1 or 2 in the XML to make the
+  game shorter. Additionally MALLOYMODE sets your attack and defense to 100
+
+
+*Used free/open source sprites and fonts from this URL:
+    https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181
+*Created my own UI/HUD elements
+*Created many of the animations by using static images from the above link and
+    modifying them to make them my own by scaling, rotating, adding new frames,
+    and changing some colors
+*Created the music myself*; both of the background music tracks are midi files
+  generated from another program I created that procedurally generates music
+

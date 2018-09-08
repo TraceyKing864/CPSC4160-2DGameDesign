@@ -1,0 +1,815 @@
+<?xml version = "1.0"?>
+<GameData>
+<!--Engine Information-->
+<title>Tracey King</title>
+<maxStringSize>50</maxStringSize>
+
+<frameCapOn>true</frameCapOn>
+<period>17</period>
+
+<maxFrames>60</maxFrames>
+<username>tracey</username>
+<coutmovement>false</coutmovement>
+
+<view>
+  <width>360</width>
+  <height>240</height>
+  <fullscreen>true</fullscreen>
+</view>
+
+<sound>
+  <backgroundTracks>2</backgroundTracks>
+  <background_0>sound/background_0.mid</background_0>
+  <background_1>sound/background_1.mid</background_1>
+  
+  <soundEffects>2</soundEffects>
+  <soundEffect_0>sound/soundEffect_0.wav</soundEffect_0>
+  <soundEffect_1>sound/soundEffect_1.wav</soundEffect_1>
+</sound>
+
+<font name="SDS_8x8">
+  <file>fonts/SDS_8x8.ttf</file>
+  <size>8</size>
+  <red>200</red>
+  <green>200</green>
+  <blue>200</blue>
+  <alpha>0</alpha>
+</font>
+
+<!--HUD Information-->
+<HUD size="9">
+  <textSpacing>8</textSpacing>
+  <textOffset>12</textOffset>
+  
+  <element_0 name="controls">
+    <tile>frame_1</tile>
+    <fontcolor>
+      <r>200</r>
+      <g>200</g>
+      <b>200</b>
+    </fontcolor>
+    <posX>0</posX>
+    <posY>0</posY>
+    <hidden>true</hidden>
+    <tiled_width>11</tiled_width>
+    <tiled_height>11</tiled_height>
+    <text>14</text>
+    <text_0>Controls</text_0>
+    <text_1>-----------------</text_1>
+    <text_2>U/F1: toggle Help</text_2>
+    <text_3>P/F2: toggle FPS</text_3>
+    <text_4>Q/ESC: quit game</text_4>
+    <text_5>J: select</text_5>
+    <text_6>k: deselect</text_6>
+    <text_7>WASD: move</text_7>
+    <text_8>M: MALLOYMODE</text_8>
+    <text_9>I: Toggle AI</text_9>
+    <text_10>-----------------</text_10>
+    <text_11>Move your troops</text_11>
+    <text_12>and attack to</text_12>
+    <text_13>defeat the AI.</text_13>
+  </element_0>
+  
+  <element_1 name="help">
+    <tile>frame_1</tile>
+    <fontcolor>
+      <r>200</r>
+      <g>200</g>
+      <b>200</b>
+    </fontcolor>
+    <posX>0</posX>
+    <posY>0</posY>
+    <hidden>false</hidden>
+    <tiled_width>8</tiled_width>
+    <tiled_height>2</tiled_height>
+    <text>1</text>
+    <text_0>U/F1 for Help</text_0>
+  </element_1>
+  
+  <element_2 name="fps">
+    <tile>frame_1</tile>
+      <fontcolor>
+        <r>200</r>
+        <g>200</g>
+        <b>200</b>
+      </fontcolor>
+    <posX>64</posX>
+    <posY>-32</posY>
+    <hidden>true</hidden>
+    <tiled_width>3</tiled_width>
+    <tiled_height>2</tiled_height>
+    <text>1</text>
+    <text_0>fps()</text_0>
+  </element_2>
+  
+  <element_3 name="myName">
+    <tile>frame_1</tile>
+      <fontcolor>
+        <r>200</r>
+        <g>200</g>
+        <b>200</b>
+      </fontcolor>
+    <posX>0</posX>
+    <posY>-32</posY>
+    <hidden>false</hidden>
+    <tiled_width>5</tiled_width>
+    <tiled_height>2</tiled_height>
+    <text>1</text>
+    <text_0>tracey</text_0>
+  </element_3>
+  
+  <element_4 name="turn">
+    <tile>frame_1</tile>
+      <fontcolor>
+        <r>200</r>
+        <g>200</g>
+        <b>200</b>
+      </fontcolor>
+    <posX>-96</posX>
+    <posY>0</posY>
+    <hidden>false</hidden>
+    <tiled_width>6</tiled_width>
+    <tiled_height>2</tiled_height>
+    <text>1</text>
+    <text_0>turn()</text_0>
+  </element_4>
+  
+  <element_5 name="tracking">
+    <tile>frame_1</tile>
+      <fontcolor>
+        <r>200</r>
+        <g>200</g>
+        <b>200</b>
+      </fontcolor>
+    <posX>160</posX>
+    <posY>0</posY>
+    <hidden>false</hidden>
+    <tiled_width>5</tiled_width>
+    <tiled_height>2</tiled_height>
+    <text>1</text>
+    <text_0>tracking()</text_0>
+  </element_5>
+  
+  <element_6 name="game_over">
+    <tile>frame_1</tile>
+      <fontcolor>
+        <r>200</r>
+        <g>200</g>
+        <b>200</b>
+      </fontcolor>
+    <posX>80</posX>
+    <posY>48</posY>
+    <hidden>true</hidden>
+    <tiled_width>12</tiled_width>
+    <tiled_height>8</tiled_height>
+    <text>4</text>
+    <text_0>gameOver()</text_0>
+    <text_1>-----------------</text_1>
+    <text_2>Press R to reset</text_2>
+    <text_3>Press Q to quit</text_3>
+  </element_6>
+  
+  <element_7 name="unit_info">
+    <tile>frame_1</tile>
+      <fontcolor>
+        <r>200</r>
+        <g>200</g>
+        <b>200</b>
+      </fontcolor>
+    <posX>-112</posX>
+    <posY>-48</posY>
+    <hidden>false</hidden>
+    <tiled_width>7</tiled_width>
+    <tiled_height>3</tiled_height>
+    <text>3</text>
+    <text_0>unitName()</text_0>
+    <text_1>unitHp()</text_1>
+    <text_2>unitMp()</text_2>
+  </element_7>
+  
+  <element_8 name="MALLOYMODE">
+    <tile>frame_1</tile>
+      <fontcolor>
+        <r>200</r>
+        <g>200</g>
+        <b>200</b>
+      </fontcolor>
+    <posX>0</posX>
+    <posY>-64</posY>
+    <hidden>true</hidden>
+    <tiled_width>7</tiled_width>
+    <tiled_height>3</tiled_height>
+    <text>1</text>
+    <text_0>MALLOYMODE</text_0>
+  </element_8>
+  
+  <actionMenu>
+    <posX>168</posX>
+    <posY>-64</posY>
+    
+    <element name="action_name">
+      <tile>frame_1</tile>
+        <fontcolor>
+          <r>200</r>
+          <g>200</g>
+          <b>200</b>
+        </fontcolor>
+      <posX>96</posX>
+      <posY>-32</posY>
+      <hidden>true</hidden>
+      <tiled_width>6</tiled_width>
+      <tiled_height>2</tiled_height>
+      <text>1</text>
+      <text_0>actionName()</text_0>
+    </element>
+  </actionMenu>
+</HUD>
+
+<sprite_default>
+  <imageWidth>16</imageWidth>
+  <imageHeight>16</imageHeight>
+  <frameInterval>200</frameInterval>
+  <moveInterval>10</moveInterval>
+  <scale s="1.0"/>
+  <transparency>false</transparency>
+  <chunkSize>48</chunkSize>
+  <distance>20</distance>
+</sprite_default>
+
+<!--Tile Image Information-->
+<tile_list>
+  <total>6</total>
+  <tile_0>grass</tile_0>
+  <tile_1>dirt</tile_1>
+  <tile_2>water</tile_2>
+  <tile_3>trees</tile_3>
+  <tile_4>hills</tile_4>
+  <tile_5>path</tile_5>
+</tile_list>
+
+<grass>
+  <file>assets/grass.png</file>
+  <rows>3</rows>
+  <cols>3</cols>
+  <collision>1</collision>
+</grass>
+
+<dirt>
+  <file>assets/dirt.png</file>
+  <rows>3</rows>
+  <cols>3</cols>
+  <collision>1</collision>
+</dirt>
+
+<water>
+  <file>assets/water.png</file>
+  <rows>3</rows>
+  <cols>3</cols>
+  <collision>0</collision>
+</water>
+
+<trees>
+  <file>assets/trees.png</file>
+  <rows>3</rows>
+  <cols>3</cols>
+  <collision>1</collision>
+</trees>
+
+<hills>
+  <file>assets/hills.png</file>
+  <rows>3</rows>
+  <cols>3</cols>
+  <collision>0</collision>
+</hills>
+
+<path>
+  <file>assets/path.png</file>
+  <rows>3</rows>
+  <cols>3</cols>
+  <collision>1</collision>
+</path>
+
+<!--User Interface Image Information-->
+<frame_1>
+  <file>assets/frame_1.png</file>
+  <rows>3</rows>
+  <cols>3</cols>
+</frame_1>
+
+<actions>
+  <count>11</count>
+  <action_0>action_blank</action_0>
+  <action_1>action_attack</action_1>
+  <action_2>action_defend</action_2>
+  <action_3>action_shout</action_3>
+  <action_4>action_smash</action_4>
+  <action_5>action_fireball</action_5>
+  <action_6>action_blizzard</action_6>
+  <action_7>action_trap</action_7>
+  <action_8>action_aim</action_8>
+  <action_9>action_heal</action_9>
+  <action_10>action_lightning</action_10>
+</actions>
+
+<action_select>
+  <file>assets/action_select.png</file>
+  <imageWidth>16</imageWidth>
+  <imageHeight>32</imageHeight>
+  <frames>1</frames>
+  <variations>1</variations>
+  <frameInterval>150</frameInterval>
+</action_select>
+
+<action_blank>
+  <file>assets/action_blank.png</file>
+  <imageWidth>16</imageWidth>
+  <imageHeight>32</imageHeight>
+  <frames>1</frames>
+  <variations>1</variations>
+  <frameInterval>150</frameInterval>
+</action_blank>
+
+<action_attack name="Attack">
+  <file>assets/action_attack.png</file>
+  <imageWidth>16</imageWidth>
+  <imageHeight>32</imageHeight>
+  <frames>2</frames>
+  <variations>1</variations>
+  <frameInterval>150</frameInterval>
+  <target>1</target>
+  <range>1</range>
+</action_attack>
+
+<action_defend name="Defend">
+  <file>assets/action_defend.png</file>
+  <imageWidth>16</imageWidth>
+  <imageHeight>32</imageHeight>
+  <frames>2</frames>
+  <variations>1</variations>
+  <frameInterval>150</frameInterval>
+  <target>4</target>
+  <range>0</range>
+</action_defend>
+
+<action_shout name="Shout">
+  <file>assets/action_shout.png</file>
+  <imageWidth>16</imageWidth>
+  <imageHeight>32</imageHeight>
+  <frames>2</frames>
+  <variations>1</variations>
+  <frameInterval>150</frameInterval>
+  <target>4</target>
+  <range>0</range>
+</action_shout>
+
+<action_smash name="Smash">
+  <file>assets/action_smash.png</file>
+  <imageWidth>16</imageWidth>
+  <imageHeight>32</imageHeight>
+  <frames>2</frames>
+  <variations>1</variations>
+  <frameInterval>150</frameInterval>
+  <target>1</target>
+  <range>1</range>
+</action_smash>
+
+<action_fireball name="Fireball">
+  <file>assets/action_fireball.png</file>
+  <imageWidth>16</imageWidth>
+  <imageHeight>32</imageHeight>
+  <frames>2</frames>
+  <variations>1</variations>
+  <frameInterval>150</frameInterval>
+  <target>1</target>
+  <range>4</range>
+</action_fireball>
+
+<action_blizzard  name="Blizzard">
+  <file>assets/action_blizzard.png</file>
+  <imageWidth>16</imageWidth>
+  <imageHeight>32</imageHeight>
+  <frames>2</frames>
+  <variations>1</variations>
+  <frameInterval>150</frameInterval>
+  <target>1</target>
+  <range>4</range>
+</action_blizzard>
+
+<action_trap name="Trap">
+  <file>assets/action_trap.png</file>
+  <imageWidth>16</imageWidth>
+  <imageHeight>32</imageHeight>
+  <frames>2</frames>
+  <variations>1</variations>
+  <frameInterval>150</frameInterval>
+  <target>1</target>
+  <range>1</range>
+</action_trap>
+
+<action_aim name="Aim">
+  <file>assets/action_aim.png</file>
+  <imageWidth>16</imageWidth>
+  <imageHeight>32</imageHeight>
+  <frames>2</frames>
+  <variations>1</variations>
+  <frameInterval>150</frameInterval>
+  <target>1</target>
+  <range>6</range>
+</action_aim>
+
+<action_heal name="Heal">
+  <file>assets/action_heal.png</file>
+  <imageWidth>16</imageWidth>
+  <imageHeight>32</imageHeight>
+  <frames>2</frames>
+  <variations>1</variations>
+  <frameInterval>150</frameInterval>
+  <target>0</target>
+  <range>2</range>
+</action_heal>
+
+<action_lightning name="Lightning">
+  <file>assets/action_lightning.png</file>
+  <imageWidth>16</imageWidth>
+  <imageHeight>32</imageHeight>
+  <frames>2</frames>
+  <variations>1</variations>
+  <frameInterval>150</frameInterval>
+  <target>1</target>
+  <range>4</range>
+</action_lightning>
+
+<!--Utility Sprites -->
+
+<shadow>
+  <file>assets/shadow.png</file>
+  <imageWidth>16</imageWidth>
+  <imageHeight>16</imageHeight>
+  <frames>1</frames>
+  <variations>1</variations>
+</shadow>
+
+<party_blue>
+  <file>assets/party_blue.png</file>
+  <imageWidth>16</imageWidth>
+  <imageHeight>16</imageHeight>
+  <frames>1</frames>
+  <variations>1</variations>
+</party_blue>
+
+<party_red>
+  <file>assets/party_red.png</file>
+  <imageWidth>16</imageWidth>
+  <imageHeight>16</imageHeight>
+  <frames>1</frames>
+  <variations>1</variations>
+</party_red>
+
+<party_green>
+  <file>assets/party_green.png</file>
+  <imageWidth>16</imageWidth>
+  <imageHeight>16</imageHeight>
+  <frames>1</frames>
+  <variations>1</variations>
+</party_green>
+
+<party_yellow>
+  <file>assets/party_yellow.png</file>
+  <imageWidth>16</imageWidth>
+  <imageHeight>16</imageHeight>
+  <frames>1</frames>
+  <variations>1</variations>
+</party_yellow>
+
+<cursor>
+  <file>assets/cursor.png</file>
+  <frames>2</frames>
+  <variations>1</variations>
+</cursor>
+
+<cursor_red>
+  <file>assets/cursor_red.png</file>
+  <frames>2</frames>
+  <variations>1</variations>
+</cursor_red>
+
+<cursor_blue>
+  <file>assets/cursor_blue.png</file>
+  <frames>2</frames>
+  <variations>1</variations>
+</cursor_blue>
+
+<cursor_green>
+  <file>assets/cursor_green.png</file>
+  <frames>2</frames>
+  <variations>1</variations>
+</cursor_green>
+
+<cursor_yellow>
+  <file>assets/cursor_yellow.png</file>
+  <frames>2</frames>
+  <variations>1</variations>
+</cursor_yellow>
+
+<range_blue>
+  <file>assets/range_blue.png</file>
+  <frames>2</frames>
+  <variations>1</variations>
+  <transparency>true</transparency>
+  <frameInterval>400</frameInterval>
+</range_blue>
+
+<range_red>
+  <file>assets/range_red.png</file>
+  <frames>2</frames>
+  <variations>1</variations>
+  <transparency>true</transparency>
+  <frameInterval>400</frameInterval>
+</range_red>
+
+<range_green>
+  <file>assets/range_green.png</file>
+  <frames>2</frames>
+  <variations>1</variations>
+  <transparency>true</transparency>
+  <frameInterval>400</frameInterval>
+</range_green>
+
+<range_yellow>
+  <file>assets/range_yellow.png</file>
+  <frames>2</frames>
+  <variations>1</variations>
+  <transparency>true</transparency>
+  <frameInterval>400</frameInterval>
+</range_yellow>
+
+<!--Animations and Projectiles-->
+<animation_sword>
+  <file>assets/animation_sword.png</file>
+  <frames>3</frames>
+  <variations>2</variations>
+  <frameInterval>150</frameInterval>
+  <cycles>1</cycles>
+  <atTarget>true</atTarget>
+</animation_sword>
+
+<animation_staff>
+  <file>assets/animation_staff.png</file>
+  <frames>3</frames>
+  <variations>2</variations>
+  <frameInterval>150</frameInterval>
+  <cycles>1</cycles>
+  <atTarget>true</atTarget>
+</animation_staff>
+
+<animation_halberd>
+  <file>assets/animation_halberd.png</file>
+  <frames>3</frames>
+  <variations>2</variations>
+  <frameInterval>150</frameInterval>
+  <cycles>1</cycles>
+  <atTarget>true</atTarget>
+</animation_halberd>
+
+<animation_bow>
+  <file>assets/animation_bow.png</file>
+  <frames>3</frames>
+  <variations>2</variations>
+  <frameInterval>150</frameInterval>
+  <cycles>1</cycles>
+  <atTarget>false</atTarget>
+</animation_bow>
+
+<animation_smash>
+  <file>assets/animation_smash.png</file>
+  <frames>5</frames>
+  <variations>2</variations>
+  <frameInterval>150</frameInterval>
+  <cycles>1</cycles>
+  <atTarget>true</atTarget>
+</animation_smash>
+
+<animation_fireball>
+  <file>assets/animation_fireball.png</file>
+  <frames>2</frames>
+  <variations>1</variations>
+  <frameInterval>150</frameInterval>
+  <atTarget>true</atTarget>
+  <cycles>1</cycles>
+</animation_fireball>
+
+<animation_blizzard>
+  <file>assets/animation_blizzard.png</file>
+  <frames>4</frames>
+  <variations>1</variations>
+  <frameInterval>150</frameInterval>
+  <atTarget>true</atTarget>
+  <cycles>1</cycles>
+</animation_blizzard>
+
+<animation_aim>
+  <file>assets/animation_aim.png</file>
+  <frames>2</frames>
+  <variations>1</variations>
+  <frameInterval>200</frameInterval>
+  <atTarget>true</atTarget>
+  <cycles>1</cycles>
+</animation_aim>
+
+<animation_heal>
+  <file>assets/animation_heal.png</file>
+  <frames>2</frames>
+  <variations>1</variations>
+  <frameInterval>150</frameInterval>
+  <atTarget>true</atTarget>
+  <cycles>2</cycles>
+</animation_heal>
+
+<animation_lightning>
+  <file>assets/animation_lightning.png</file>
+  <frames>2</frames>
+  <variations>1</variations>
+  <frameInterval>100</frameInterval>
+  <atTarget>true</atTarget>
+  <cycles>2</cycles>
+</animation_lightning>
+
+<animation_shout>
+  <file>assets/animation_shout.png</file>
+  <frames>4</frames>
+  <variations>1</variations>
+  <frameInterval>150</frameInterval>
+  <cycles>1</cycles>
+  <atTarget>true</atTarget>
+</animation_shout>
+
+<animation_trap>
+  <file>assets/animation_trap.png</file>
+  <frames>2</frames>
+  <variations>1</variations>
+  <frameInterval>150</frameInterval>
+  <cycles>2</cycles>
+  <atTarget>true</atTarget>
+</animation_trap>
+
+<projectile_fireball>
+  <file>assets/projectile_fireball.png</file>
+  <frames>2</frames>
+  <variations>8</variations>
+  <frameInterval>150</frameInterval>
+  <eta>4</eta>
+</projectile_fireball>
+
+<projectile_lightning>
+  <file>assets/projectile_lightning.png</file>
+  <frames>2</frames>
+  <variations>8</variations>
+  <frameInterval>150</frameInterval>
+  <eta>4</eta>
+</projectile_lightning>
+
+<projectile_arrow>
+  <file>assets/projectile_arrow.png</file>
+  <frames>2</frames>
+  <variations>8</variations>
+  <frameInterval>150</frameInterval>
+  <eta>4</eta>
+</projectile_arrow>
+
+<!--Character Information-->
+<warrior>
+  <atk>24</atk>
+  <def>16</def>
+  <mov>4</mov>
+  <hp>40</hp>
+  <mp>8</mp>
+  <speed>18</speed>
+  <mov>4</mov>
+  <ability1>3</ability1>
+  <ability2>4</ability2>
+  <atkRange>1</atkRange>
+  <attackAnimation>animation_sword</attackAnimation>
+  
+  <file>assets/warrior.png</file>
+  <frames>4</frames>
+  <variations>4</variations>
+</warrior>
+
+<mage>
+  <atk>18</atk>
+  <def>13</def>
+  <mov>5</mov>
+  <hp>30</hp>
+  <mp>38</mp>
+  <speed>19</speed>
+  <ability1>5</ability1>
+  <ability2>6</ability2>
+  <atkRange>1</atkRange>
+  <attackAnimation>animation_staff</attackAnimation>
+  
+  <file>assets/mage.png</file>
+  <frames>4</frames>
+  <variations>4</variations>
+</mage>
+
+<archer>
+  <atk>22</atk>
+  <def>14</def>
+  <mov>6</mov>
+  <hp>34</hp>
+  <mp>24</mp>
+  <speed>22</speed>
+  <ability1>7</ability1>
+  <ability2>8</ability2>
+  <atkRange>3</atkRange>
+  <attackAnimation>animation_bow</attackAnimation>
+  <attackProjectile>projectile_arrow</attackProjectile>
+  
+  <file>assets/archer.png</file>
+  <frames>4</frames>
+  <variations>4</variations>
+</archer>
+
+<paladin>
+  <atk>20</atk>
+  <def>18</def>
+  <mov>5</mov>
+  <hp>38</hp>
+  <mp>26</mp>
+  <speed>17</speed>
+  <ability1>9</ability1>
+  <ability2>10</ability2>
+  <atkRange>1</atkRange>
+  <attackAnimation>animation_halberd</attackAnimation>
+  
+  <file>assets/paladin.png</file>
+  <frames>4</frames>
+  <variations>4</variations>
+</paladin>
+
+<!--Scene Information-->
+<scene>
+  <board>
+    <width>27</width>
+    <height>17</height>
+    <file>assets/map_0.txt</file>
+  </board>
+  
+  <units_player>
+    <total>4</total>
+    <unit_0>
+      <class>warrior</class>
+      <name>Brahms</name>
+      <x>11</x>
+      <y>11</y>
+    </unit_0>
+    <unit_1>
+      <class>mage</class>
+      <name>Chopin</name>
+      <x>13</x>
+      <y>8</y>
+    </unit_1>
+    <unit_2>
+      <class>archer</class>
+      <name>Liszt</name>
+      <x>10</x>
+      <y>10</y>
+    </unit_2>
+    <unit_3>
+      <class>paladin</class>
+      <name>Schumann</name>
+      <x>9</x>
+      <y>11</y>
+    </unit_3>
+  </units_player>
+  
+  <units_ai>
+    <total>4</total>
+    <unit_0>
+      <class>warrior</class>
+      <name>Mozart</name>
+      <x>14</x>
+      <y>14</y>
+    </unit_0>
+    <unit_1>
+      <class>mage</class>
+      <name>Haydn</name>
+      <x>15</x>
+      <y>15</y>
+    </unit_1>
+    <unit_2>
+      <class>archer</class>
+      <name>Beethoven</name>
+      <x>16</x>
+      <y>14</y>
+    </unit_2>
+    <unit_3>
+      <class>paladin</class>
+      <name>Bach</name>
+      <x>14</x>
+      <y>16</y>
+    </unit_3>
+  </units_ai>
+</scene>
+
+</GameData>
